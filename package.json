@@ -1,6 +1,24 @@
 {
-	"name": "@sveltejs-labs/chartjs",
+	"name": "@sveltejs-labs/chart.js",
 	"version": "0.0.1",
+	"description": "chart.js wrapper for Svelte",
+	"keywords": [
+		"svelte",
+		"sveltekit",
+		"chart",
+		"chart.js",
+		"wrapper"
+	],
+	"homepage": "https://github.com/sveltejs-labs/chart.js",
+	"author": "Minsoo Choo <minsoochoo0122@proton.me>",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/sveltejs-labs/chart.js.git"
+	},
+	"bugs": {
+		"url": "https://github.com/sveltejs-labs/chart.js/issues"
+	},
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run prepack",
@@ -77,9 +95,6 @@
 		"vite": "^6.0.0",
 		"vitest": "^3.0.0"
 	},
-	"keywords": [
-		"svelte"
-	],
 	"dependencies": {
 		"@types/chart.js": "^2.9.41",
 		"chart.js": "^4.4.8"
