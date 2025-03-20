@@ -1,46 +1,66 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+	import type { Snapshot } from './$types';
+
 	import Chart from 'chart.js/auto';
 	import type { ChartData, ChartOptions, UpdateMode } from 'chart.js';
 
-	let chartContainer: HTMLCanvasElement | null = null;
-
 	let {
 		data,
-		options,
-		updateMode
-	}: { data: ChartData; options: ChartOptions | undefined; updateMode: UpdateMode | undefined } =
-		$props();
+		options = undefined,
+		updateMode = undefined,
+		id = undefined,
+		width = undefined,
+		height = undefined,
+		ariaLabel = undefined,
+		role = undefined
+	}: {
+		data: ChartData;
+		options?: ChartOptions | undefined;
+		updateMode?: UpdateMode | undefined;
+		id?: string | undefined;
+		width?: number | string | undefined;
+		height?: number | string | undefined;
+		ariaLabel?: string | undefined;
+		role?: string | undefined;
+	} = $props();
 
-	let chart: Chart | null = null;
+	let chartObject: Chart | null = null;
 
-	$effect(() => {
-		if (chart) {
-			chart.data = data;
-			if (options) {
-				chart.options = options;
-			}
-			chart.update(updateMode);
-		}
-	});
-
-	onMount(() => {
-		if (chartContainer) {
-			// Initialize the chart
-			chart = new Chart(chartContainer, {
-				type: 'radar',
-				data: data,
-				options: options
+	function chart(
+		node: HTMLCanvasElement,
+		[_data, _options, _updateMode]: [
+			Snapshot<ChartData>,
+			Snapshot<ChartOptions>,
+			Snapshot<UpdateMode>
+		]
+	) {
+		function setupChart() {
+			chartObject = new Chart(node, {
+				type: 'scatter',
+				data: _data,
+				options: _options
 			});
-
-			return () => {
-				chart?.destroy();
-			};
 		}
-	});
+		setupChart();
+		return {
+			update() {
+				chartObject?.update(_updateMode);
+			},
+			destroy() {
+				chartObject?.destroy();
+			}
+		};
+	}
 </script>
 
-<canvas bind:this={chartContainer}></canvas>
+<canvas
+	use:chart={[$state.snapshot(data), $state.snapshot(options), $state.snapshot(updateMode)]}
+	{id}
+	{width}
+	{height}
+	aria-label={ariaLabel}
+	{role}
+></canvas>
 
 <style>
 	canvas {

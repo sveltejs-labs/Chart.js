@@ -1,3 +1,26 @@
-<h1>Welcome to your library project</h1>
-<p>Create your package using @sveltejs/package and preview/showcase your work with SvelteKit</p>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script lang="ts">
+	import Bubble from '$lib/components/Bubble.svelte';
+
+	const data = {
+		datasets: [
+			{
+				label: 'First Dataset',
+				data: [
+					{
+						x: 20,
+						y: 30,
+						r: 15
+					},
+					{
+						x: 40,
+						y: 10,
+						r: 10
+					}
+				],
+				backgroundColor: 'rgb(255, 99, 132)'
+			}
+		]
+	};
+</script>
+
+<Bubble {data} />
