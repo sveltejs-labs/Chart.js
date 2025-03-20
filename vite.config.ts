@@ -1,4 +1,3 @@
-import tailwindcss from '@tailwindcss/vite';
 import { svelteTesting } from '@testing-library/svelte/vite';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
@@ -10,7 +9,7 @@ const dirname =
 
 // More info at: https://storybook.js.org/docs/writing-tests/test-addon
 export default defineConfig({
-	plugins: [tailwindcss(), sveltekit()],
+	plugins: [sveltekit()],
 	test: {
 		workspace: [
 			{
