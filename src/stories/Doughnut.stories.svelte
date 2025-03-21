@@ -1,6 +1,7 @@
 <script module lang="ts">
 	import { defineMeta } from '@storybook/addon-svelte-csf';
 	import Doughnut from '$lib/components/Doughnut.svelte';
+	import argTypes from '$lib/utils/argTypes';
 
 	const data = {
 		labels: ['Red', 'Blue', 'Yellow'],
@@ -17,9 +18,7 @@
 	const { Story } = defineMeta({
 		title: 'Doughnut Chart',
 		component: Doughnut,
-		argTypes: {
-			data: { control: 'object' }
-		}
+		argTypes
 	});
 </script>
 

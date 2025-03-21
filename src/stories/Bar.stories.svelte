@@ -1,8 +1,8 @@
 <script module lang="ts">
 	import { defineMeta } from '@storybook/addon-svelte-csf';
 	import Bar from '$lib/components/Bar.svelte';
-
 	import months from '$lib/utils/months.js';
+	import argTypes from '$lib/utils/argTypes';
 
 	const labels = months({ count: 7 });
 	const data = {
@@ -45,9 +45,7 @@
 	const { Story } = defineMeta({
 		title: 'Bar Chart',
 		component: Bar,
-		argTypes: {
-			data: { control: 'object' }
-		}
+		argTypes
 	});
 </script>
 

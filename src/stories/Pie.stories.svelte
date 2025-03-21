@@ -1,6 +1,7 @@
 <script module lang="ts">
 	import { defineMeta } from '@storybook/addon-svelte-csf';
 	import Pie from '$lib/components/Pie.svelte';
+	import argTypes from '$lib/utils/argTypes';
 
 	const data = {
 		labels: ['Red', 'Blue', 'Yellow'],
@@ -17,9 +18,7 @@
 	const { Story } = defineMeta({
 		title: 'Pie Chart',
 		component: Pie,
-		argTypes: {
-			data: { control: 'object' }
-		}
+		argTypes
 	});
 </script>
 

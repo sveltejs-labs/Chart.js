@@ -1,6 +1,7 @@
 <script module lang="ts">
 	import { defineMeta } from '@storybook/addon-svelte-csf';
 	import Bubble from '$lib/components/Bubble.svelte';
+	import argTypes from '$lib/utils/argTypes';
 
 	const data = {
 		datasets: [
@@ -26,16 +27,7 @@
 	const { Story } = defineMeta({
 		title: 'Bubble Chart',
 		component: Bubble,
-		argTypes: {
-			data: { control: 'object' },
-			options: { control: 'object', defaultValue: null },
-			updateMode: { control: 'text', defaultValue: null },
-			id: { control: 'text', defaultValue: null },
-			width: { controls: ['number', 'text'], defaultValue: null },
-			height: { controls: ['number', 'text'], defaultValue: null },
-			ariaLabel: { control: 'text', defaultValue: null },
-			role: { control: 'text', defaultValue: null }
-		}
+		argTypes
 	});
 </script>
 
