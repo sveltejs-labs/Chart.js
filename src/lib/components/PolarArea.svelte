@@ -16,12 +16,12 @@
 </script>
 
 <canvas
-	use:chart={[
-		'polarArea',
-		$state.snapshot(data),
-		$state.snapshot(options),
-		$state.snapshot(updateMode)
-	]}
+	use:chart={{
+		type: 'polarArea',
+		data: $state.snapshot(data),
+		options: $state.snapshot(options),
+		updateMode: $state.snapshot(updateMode)
+	}}
 	{id}
 	{width}
 	{height}

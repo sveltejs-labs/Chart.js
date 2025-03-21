@@ -16,7 +16,12 @@
 </script>
 
 <canvas
-	use:chart={['pie', $state.snapshot(data), $state.snapshot(options), $state.snapshot(updateMode)]}
+	use:chart={{
+		type: 'pie',
+		data: $state.snapshot(data),
+		options: $state.snapshot(options),
+		updateMode: $state.snapshot(updateMode)
+	}}
 	{id}
 	{width}
 	{height}

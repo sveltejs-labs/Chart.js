@@ -16,12 +16,12 @@
 </script>
 
 <canvas
-	use:chart={[
-		'radar',
-		$state.snapshot(data),
-		$state.snapshot(options),
-		$state.snapshot(updateMode)
-	]}
+	use:chart={{
+		type: 'radar',
+		data: $state.snapshot(data),
+		options: $state.snapshot(options),
+		updateMode: $state.snapshot(updateMode)
+	}}
 	{id}
 	{width}
 	{height}

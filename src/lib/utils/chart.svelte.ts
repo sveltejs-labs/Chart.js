@@ -5,15 +5,25 @@ import Chart from 'chart.js/auto';
 
 export const chart: Action<
 	HTMLCanvasElement,
-	[keyof ChartTypeRegistry, Snapshot<ChartData>, Snapshot<ChartOptions>, Snapshot<UpdateMode>]
+	{
+		type: keyof ChartTypeRegistry;
+		data: Snapshot<ChartData>;
+		options: Snapshot<ChartOptions>;
+		updateMode: Snapshot<UpdateMode>;
+	}
 > = (
 	node: HTMLCanvasElement,
-	[type, data, options, updateMode]: [
-		keyof ChartTypeRegistry,
-		Snapshot<ChartData>,
-		Snapshot<ChartOptions>,
-		Snapshot<UpdateMode>
-	]
+	{
+		type,
+		data,
+		options,
+		updateMode
+	}: {
+		type: keyof ChartTypeRegistry;
+		data: Snapshot<ChartData>;
+		options: Snapshot<ChartOptions>;
+		updateMode: Snapshot<UpdateMode>;
+	}
 ) => {
 	const chartObject = new Chart(node, {
 		type: type,

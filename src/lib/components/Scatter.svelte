@@ -16,12 +16,12 @@
 </script>
 
 <canvas
-	use:chart={[
-		'scatter',
-		$state.snapshot(data),
-		$state.snapshot(options),
-		$state.snapshot(updateMode)
-	]}
+	use:chart={{
+		type: 'scatter',
+		data: $state.snapshot(data),
+		options: $state.snapshot(options),
+		updateMode: $state.snapshot(updateMode)
+	}}
 	{id}
 	{width}
 	{height}

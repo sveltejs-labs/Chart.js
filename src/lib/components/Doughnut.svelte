@@ -16,12 +16,12 @@
 </script>
 
 <canvas
-	use:chart={[
-		'doughnut',
-		$state.snapshot(data),
-		$state.snapshot(options),
-		$state.snapshot(updateMode)
-	]}
+	use:chart={{
+		type: 'doughnut',
+		data: $state.snapshot(data),
+		options: $state.snapshot(options),
+		updateMode: $state.snapshot(updateMode)
+	}}
 	{id}
 	{width}
 	{height}
