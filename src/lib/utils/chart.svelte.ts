@@ -32,7 +32,9 @@ export const chart: Action<
 	});
 
 	$effect(() => {
-		chartObject?.update(updateMode);
+		chartObject.data = data;
+		chartObject.options = options;
+		chartObject.update(updateMode);
 		return () => {
 			chartObject?.destroy();
 		};
