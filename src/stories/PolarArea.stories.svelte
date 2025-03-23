@@ -1,7 +1,7 @@
 <script module lang="ts">
 	import { defineMeta } from '@storybook/addon-svelte-csf';
 	import PolarArea from '$lib/components/PolarArea.svelte';
-	import argTypes from '$lib/utils/argTypes';
+	import argTypes from './utils/argTypes';
 
 	const data = {
 		labels: ['Red', 'Green', 'Yellow', 'Grey', 'Blue'],

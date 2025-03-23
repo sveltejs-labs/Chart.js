@@ -1,7 +1,7 @@
 <script module lang="ts">
 	import { defineMeta } from '@storybook/addon-svelte-csf';
 	import Radar from '$lib/components/Radar.svelte';
-	import argTypes from '$lib/utils/argTypes';
+	import argTypes from './utils/argTypes';
 
 	const data = {
 		labels: ['Eating', 'Drinking', 'Sleeping', 'Designing', 'Coding', 'Cycling', 'Running'],

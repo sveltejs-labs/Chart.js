@@ -1,8 +1,6 @@
 <script lang="ts">
 	import chart from '$lib/utils/chart.svelte';
 
-	import type { ChartProps } from '$lib/utils/type';
-
 	let {
 		data,
 		options = undefined,

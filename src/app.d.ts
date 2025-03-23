@@ -1,3 +1,5 @@
+import type { ChartData, ChartOptions, UpdateMode } from 'chart.js';
+
 // See https://svelte.dev/docs/kit/types#app.d.ts
 // for information about these interfaces
 declare global {
@@ -7,6 +9,17 @@ declare global {
 		// interface PageData {}
 		// interface PageState {}
 		// interface Platform {}
+	}
+
+	export interface ChartProps {
+		data: ChartData;
+		options?: ChartOptions | undefined;
+		updateMode?: UpdateMode | undefined;
+		id?: string | undefined;
+		width?: number | string | undefined;
+		height?: number | string | undefined;
+		ariaLabel?: string | undefined;
+		role?: string | undefined;
 	}
 }
 

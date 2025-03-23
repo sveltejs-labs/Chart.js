@@ -1,7 +1,7 @@
 <script module lang="ts">
 	import { defineMeta } from '@storybook/addon-svelte-csf';
 	import Bubble from '$lib/components/Bubble.svelte';
-	import argTypes from '$lib/utils/argTypes';
+	import argTypes from './utils/argTypes';
 
 	const data = {
 		datasets: [

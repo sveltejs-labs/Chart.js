@@ -1,5 +1,4 @@
 import type { ArgTypes } from '@storybook/svelte';
-import type { ChartProps } from '$lib/utils/type';
 
 export const argTypes: Partial<ArgTypes<ChartProps>> = {
 	data: {

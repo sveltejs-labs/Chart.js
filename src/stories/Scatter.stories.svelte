@@ -2,7 +2,7 @@
 	import { defineMeta } from '@storybook/addon-svelte-csf';
 	import Scatter from '$lib/components/Scatter.svelte';
 	import type { ChartOptions } from 'chart.js';
-	import argTypes from '$lib/utils/argTypes';
+	import argTypes from './utils/argTypes';
 
 	const data = {
 		datasets: [
