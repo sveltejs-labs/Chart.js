@@ -1,4 +1,6 @@
 import type { Action } from 'svelte/action';
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
 import type { Snapshot } from './$types';
 import type { ChartData, ChartOptions, ChartTypeRegistry, UpdateMode } from 'chart.js';
 import Chart from 'chart.js/auto';
@@ -33,8 +35,14 @@ export const chart: Action<
 
 	$effect(() => {
 		chartObject.data = data;
-		chartObject.options = options;
-		chartObject.update(updateMode);
+
+		if (options) {
+			chartObject.options = options;
+		}
+		if (updateMode) {
+			chartObject.update(updateMode);
+		}
+
 		return () => {
 			chartObject?.destroy();
 		};

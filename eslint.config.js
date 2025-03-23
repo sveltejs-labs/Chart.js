@@ -41,6 +41,6 @@ export default ts.config(
 		}
 	},
 	{
-		ignores: ['!.storybook'],
+		ignores: ['!.storybook']
 	}
 );

@@ -15,19 +15,21 @@
 	}: ChartProps = $props();
 </script>
 
-<canvas
-	use:chart={{
-		type: 'pie',
-		data: $state.snapshot(data),
-		options: $state.snapshot(options),
-		updateMode: $state.snapshot(updateMode)
-	}}
-	{id}
-	{width}
-	{height}
-	aria-label={ariaLabel}
-	{role}
-></canvas>
+{#key [data, options, updateMode]}
+	<canvas
+		use:chart={{
+			type: 'pie',
+			data: $state.snapshot(data),
+			options: $state.snapshot(options),
+			updateMode: $state.snapshot(updateMode)
+		}}
+		{id}
+		{width}
+		{height}
+		aria-label={ariaLabel}
+		{role}
+	></canvas>
+{/key}
 
 <style>
 	canvas {

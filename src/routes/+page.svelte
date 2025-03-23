@@ -1,9 +1,10 @@
 <script lang="ts">
 	import Bar from '$lib/components/Bar.svelte';
 	import months from '$lib/utils/months.js';
+	import type { ChartOptions } from 'chart.js';
 
 	const labels = months({ count: 7 });
-	const data = $state({
+	const data = {
 		labels: labels,
 		datasets: [
 			{
@@ -30,9 +31,9 @@
 				borderWidth: 1
 			}
 		]
-	});
+	};
 
-	const options = {
+	const options: ChartOptions = {
 		scales: {
 			y: {
 				beginAtZero: true
@@ -45,7 +46,7 @@
 
 <button
 	onclick={() => {
-		data.datasets[0].data[0] = 14;
+		data.datasets[0].data[0] = 0;
 	}}
 >
 	a
