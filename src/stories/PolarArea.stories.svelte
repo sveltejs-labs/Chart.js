@@ -2,8 +2,9 @@
 	import { defineMeta } from '@storybook/addon-svelte-csf';
 	import PolarArea from '$lib/components/PolarArea.svelte';
 	import argTypes from './utils/argTypes';
+	import type { ChartData } from 'chart.js';
 
-	const data = {
+	const data: ChartData = {
 		labels: ['Red', 'Green', 'Yellow', 'Grey', 'Blue'],
 		datasets: [
 			{

@@ -1,10 +1,10 @@
 <script module lang="ts">
 	import { defineMeta } from '@storybook/addon-svelte-csf';
 	import Scatter from '$lib/components/Scatter.svelte';
-	import type { ChartOptions } from 'chart.js';
 	import argTypes from './utils/argTypes';
+	import type { ChartData, ChartOptions } from 'chart.js';
 
-	const data = {
+	const data: ChartData = {
 		datasets: [
 			{
 				label: 'Scatter Dataset',

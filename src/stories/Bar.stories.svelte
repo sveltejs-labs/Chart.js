@@ -3,9 +3,10 @@
 	import Bar from '$lib/components/Bar.svelte';
 	import months from './utils/months.js';
 	import argTypes from './utils/argTypes';
+	import type { ChartData, ChartOptions } from 'chart.js';
 
 	const labels = months({ count: 7 });
-	const data = {
+	const data: ChartData = {
 		labels: labels,
 		datasets: [
 			{
@@ -34,7 +35,7 @@
 		]
 	};
 
-	const options = {
+	const options: ChartOptions = {
 		scales: {
 			y: {
 				beginAtZero: true

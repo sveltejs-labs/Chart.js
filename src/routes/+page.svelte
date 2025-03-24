@@ -1,10 +1,10 @@
 <script lang="ts">
 	import Bar from '$lib/components/Bar.svelte';
 	import months from '../stories/utils/months.js';
-	import type { ChartOptions } from 'chart.js';
+	import type { ChartData, ChartOptions } from 'chart.js';
 
 	const labels = months({ count: 7 });
-	const data = {
+	const data: ChartData = {
 		labels: labels,
 		datasets: [
 			{

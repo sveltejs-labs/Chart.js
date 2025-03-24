@@ -3,9 +3,10 @@
 	import Line from '$lib/components/Line.svelte';
 	import months from './utils/months.js';
 	import argTypes from './utils/argTypes';
+	import type { ChartData } from 'chart.js';
 
 	const labels = months({ count: 7 });
-	const data = {
+	const data: ChartData = {
 		labels: labels,
 		datasets: [
 			{

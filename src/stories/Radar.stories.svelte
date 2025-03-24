@@ -2,8 +2,9 @@
 	import { defineMeta } from '@storybook/addon-svelte-csf';
 	import Radar from '$lib/components/Radar.svelte';
 	import argTypes from './utils/argTypes';
+	import type { ChartData } from 'chart.js';
 
-	const data = {
+	const data: ChartData = {
 		labels: ['Eating', 'Drinking', 'Sleeping', 'Designing', 'Coding', 'Cycling', 'Running'],
 		datasets: [
 			{

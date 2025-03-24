@@ -2,8 +2,9 @@
 	import { defineMeta } from '@storybook/addon-svelte-csf';
 	import Doughnut from '$lib/components/Doughnut.svelte';
 	import argTypes from './utils/argTypes';
+	import type { ChartData } from 'chart.js';
 
-	const data = {
+	const data: ChartData = {
 		labels: ['Red', 'Blue', 'Yellow'],
 		datasets: [
 			{
