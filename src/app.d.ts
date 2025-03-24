@@ -19,7 +19,7 @@ declare global {
 		id?: string | undefined;
 		width?: number | string | undefined;
 		height?: number | string | undefined;
-		ariaLabel?: string | undefined;
+		'aria-label'?: string | undefined;
 		role?: string | undefined;
 	}
 }

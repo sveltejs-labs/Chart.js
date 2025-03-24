@@ -9,7 +9,7 @@
 		id = undefined,
 		width = undefined,
 		height = undefined,
-		ariaLabel = undefined,
+		'aria-label': ariaLabel = undefined,
 		role = undefined
 	}: ChartProps = $props();
 </script>

@@ -33,7 +33,7 @@ export const argTypes: Partial<ArgTypes<ChartProps>> = {
 		},
 		description: 'Canvas height'
 	},
-	ariaLabel: {
+	'aria-label': {
 		control: 'text',
 		description: 'Canvas aria-label'
 	},
