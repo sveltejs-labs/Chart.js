@@ -1,4 +1,4 @@
-import type { ChartData, ChartOptions, UpdateMode } from 'chart.js';
+import type { ChartData, ChartOptions, Plugin, UpdateMode } from 'chart.js';
 
 // See https://svelte.dev/docs/kit/types#app.d.ts
 // for information about these interfaces
@@ -14,6 +14,7 @@ declare global {
 	export interface ChartProps {
 		data: ChartData;
 		options?: ChartOptions | undefined;
+		plugins?: Plugin[] | undefined;
 		updateMode?: UpdateMode | undefined;
 		id?: string | undefined;
 		width?: number | string | undefined;

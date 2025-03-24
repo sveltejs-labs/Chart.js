@@ -2,32 +2,44 @@ import type { ArgTypes } from '@storybook/svelte';
 
 export const argTypes: Partial<ArgTypes<ChartProps>> = {
 	data: {
-		control: 'object'
+		control: 'object',
+		description: 'ChartJS data'
 	},
 	options: {
-		control: 'object'
+		control: 'object',
+		description: 'ChartJS options'
+	},
+	plugins: {
+		control: 'object',
+		description: 'ChartJS plugins'
 	},
 	updateMode: {
-		control: 'select'
+		control: 'select',
+		description: 'ChartJS update mode'
 	},
 	id: {
-		control: 'text'
+		control: 'text',
+		description: 'Canvas id'
 	},
 	width: {
 		control: {
 			type: 'number'
-		}
+		},
+		description: 'Canvas width'
 	},
 	height: {
 		control: {
 			type: 'number'
-		}
+		},
+		description: 'Canvas height'
 	},
 	ariaLabel: {
-		control: 'text'
+		control: 'text',
+		description: 'Canvas aria-label'
 	},
 	role: {
-		control: 'text'
+		control: 'text',
+		description: 'Canvas role'
 	}
 };
 

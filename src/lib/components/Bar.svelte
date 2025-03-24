@@ -5,6 +5,7 @@
 		data,
 		options = undefined,
 		updateMode = undefined,
+		plugins = undefined,
 		id = undefined,
 		width = undefined,
 		height = undefined,
@@ -19,7 +20,8 @@
 			type: 'bar',
 			data: $state.snapshot(data),
 			options: $state.snapshot(options),
-			updateMode: $state.snapshot(updateMode)
+			updateMode: $state.snapshot(updateMode),
+			plugins: $state.snapshot(plugins)
 		}}
 		{id}
 		{width}

@@ -2,7 +2,7 @@ import type { Action } from 'svelte/action';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-expect-error
 import type { Snapshot } from './$types';
-import type { ChartData, ChartOptions, ChartTypeRegistry, UpdateMode } from 'chart.js';
+import type { ChartData, ChartOptions, ChartTypeRegistry, Plugin, UpdateMode } from 'chart.js';
 import Chart from 'chart.js/auto';
 
 export const chart: Action<
@@ -11,6 +11,7 @@ export const chart: Action<
 		type: keyof ChartTypeRegistry;
 		data: Snapshot<ChartData>;
 		options: Snapshot<ChartOptions>;
+		plugins: Snapshot<Plugin[]>;
 		updateMode: Snapshot<UpdateMode>;
 	}
 > = (
@@ -19,18 +20,21 @@ export const chart: Action<
 		type,
 		data,
 		options,
+		plugins,
 		updateMode
 	}: {
 		type: keyof ChartTypeRegistry;
 		data: Snapshot<ChartData>;
 		options: Snapshot<ChartOptions>;
+		plugins: Snapshot<Plugin[]>;
 		updateMode: Snapshot<UpdateMode>;
 	}
 ) => {
 	const chartObject = new Chart(node, {
-		type: type,
-		data: data,
-		options: options
+		type,
+		data,
+		options,
+		plugins
 	});
 
 	$effect(() => {

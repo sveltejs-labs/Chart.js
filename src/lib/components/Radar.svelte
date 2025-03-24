@@ -4,6 +4,7 @@
 	let {
 		data,
 		options = undefined,
+		plugins = undefined,
 		updateMode = undefined,
 		id = undefined,
 		width = undefined,
@@ -19,7 +20,8 @@
 			type: 'radar',
 			data: $state.snapshot(data),
 			options: $state.snapshot(options),
-			updateMode: $state.snapshot(updateMode)
+			updateMode: $state.snapshot(updateMode),
+			plugins: $state.snapshot(plugins)
 		}}
 		{id}
 		{width}
