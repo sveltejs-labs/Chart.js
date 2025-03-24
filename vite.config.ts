@@ -1,4 +1,3 @@
-import { svelteTesting } from '@testing-library/svelte/vite';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
 import path from 'node:path';
@@ -14,14 +13,18 @@ export default defineConfig({
 		workspace: [
 			{
 				extends: './vite.config.ts',
-				plugins: [svelteTesting()],
 				test: {
 					name: 'client',
-					environment: 'jsdom',
 					clearMocks: true,
 					include: ['src/**/*.svelte.{test,spec}.{js,ts}'],
 					exclude: ['src/lib/server/**'],
-					setupFiles: ['./vitest-setup-client.ts']
+					browser: {
+						enabled: true,
+						provider: 'playwright',
+						// https://vitest.dev/guide/browser/playwright
+						instances: [{ browser: 'chromium' }, { browser: 'firefox' }, { browser: 'webkit' }],
+						headless: true
+					}
 				}
 			},
 			{
@@ -48,11 +51,7 @@ export default defineConfig({
 						enabled: true,
 						headless: true,
 						provider: 'playwright',
-						instances: [
-							{
-								browser: 'chromium'
-							}
-						]
+						instances: [{ browser: 'chromium' }, { browser: 'firefox' }, { browser: 'webkit' }]
 					},
 					setupFiles: ['.storybook/vitest.setup.ts']
 				}
