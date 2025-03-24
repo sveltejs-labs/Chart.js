@@ -1,8 +1,4 @@
 // Reexport your entry components here
-export * from 'chart.js';
-export { default as Chart } from 'chart.js/auto';
-export type * from 'chart.js';
-
 export { default as Bar } from '$lib/components/Bar.svelte';
 export { default as Bubble } from '$lib/components/Bubble.svelte';
 export { default as Doughnut } from '$lib/components/Doughnut.svelte';

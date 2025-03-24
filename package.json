@@ -55,6 +55,7 @@
 		}
 	},
 	"peerDependencies": {
+		"chart.js": "^4.4.8",
 		"svelte": "^5.0.0"
 	},
 	"devDependencies": {
@@ -80,6 +81,7 @@
 		"@vitest/browser": "^3.0.9",
 		"@vitest/coverage-v8": "^3.0.9",
 		"@vitest/ui": "^3.0.9",
+		"chart.js": "^4.4.8",
 		"eslint": "^9.23.0",
 		"eslint-config-prettier": "^10.1.1",
 		"eslint-plugin-storybook": "^0.11.6",
@@ -97,8 +99,5 @@
 		"vite": "^6.2.2",
 		"vitest": "^3.0.9",
 		"vitest-browser-svelte": "^0.1.0"
-	},
-	"dependencies": {
-		"chart.js": "^4.4.8"
 	}
 }
