@@ -1,7 +1,7 @@
 <script module lang="ts">
 	import { defineMeta } from '@storybook/addon-svelte-csf';
-	import Pie from '$lib/components/Pie.svelte';
-	import argTypes from './utils/argTypes';
+	import { Pie } from '$lib/index.js';
+	import argTypes from './utils/argTypes.js';
 	import type { ChartData } from 'chart.js';
 
 	const data: ChartData = {

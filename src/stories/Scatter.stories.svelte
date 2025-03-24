@@ -1,7 +1,7 @@
 <script module lang="ts">
 	import { defineMeta } from '@storybook/addon-svelte-csf';
-	import Scatter from '$lib/components/Scatter.svelte';
-	import argTypes from './utils/argTypes';
+	import { Scatter } from '$lib/index.js';
+	import argTypes from './utils/argTypes.js';
 	import type { ChartData, ChartOptions } from 'chart.js';
 
 	const data: ChartData = {

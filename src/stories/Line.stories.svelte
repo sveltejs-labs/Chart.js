@@ -1,8 +1,8 @@
 <script module lang="ts">
 	import { defineMeta } from '@storybook/addon-svelte-csf';
-	import Line from '$lib/components/Line.svelte';
+	import { Line } from '$lib/index.js';
 	import months from './utils/months.js';
-	import argTypes from './utils/argTypes';
+	import argTypes from './utils/argTypes.js';
 	import type { ChartData } from 'chart.js';
 
 	const labels = months({ count: 7 });

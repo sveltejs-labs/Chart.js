@@ -1,7 +1,7 @@
 <script module lang="ts">
 	import { defineMeta } from '@storybook/addon-svelte-csf';
-	import PolarArea from '$lib/components/PolarArea.svelte';
-	import argTypes from './utils/argTypes';
+	import { PolarArea } from '$lib/index.js';
+	import argTypes from './utils/argTypes.js';
 	import type { ChartData } from 'chart.js';
 
 	const data: ChartData = {

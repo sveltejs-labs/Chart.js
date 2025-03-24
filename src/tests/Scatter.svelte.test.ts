@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { render } from 'vitest-browser-svelte';
-import { Scatter } from '$lib';
+import { Scatter } from '$lib/index.js';
 import type { ChartData, ChartOptions } from 'chart.js';
 
 const data: ChartData = {

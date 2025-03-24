@@ -1,7 +1,7 @@
 <script module lang="ts">
 	import { defineMeta } from '@storybook/addon-svelte-csf';
-	import Bubble from '$lib/components/Bubble.svelte';
-	import argTypes from './utils/argTypes';
+	import { Bubble } from '$lib/index.js';
+	import argTypes from './utils/argTypes.js';
 	import type { ChartData } from 'chart.js';
 
 	const data: ChartData = {

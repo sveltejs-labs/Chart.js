@@ -1,7 +1,7 @@
 <script module lang="ts">
 	import { defineMeta } from '@storybook/addon-svelte-csf';
-	import Radar from '$lib/components/Radar.svelte';
-	import argTypes from './utils/argTypes';
+	import { Radar } from '$lib/index.js';
+	import argTypes from './utils/argTypes.js';
 	import type { ChartData } from 'chart.js';
 
 	const data: ChartData = {

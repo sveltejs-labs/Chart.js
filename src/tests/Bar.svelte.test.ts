@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { render } from 'vitest-browser-svelte';
-import { Bar } from '$lib';
+import { Bar } from '$lib/index.js';
 import type { ChartData, ChartOptions } from 'chart.js';
 import months from '../stories/utils/months.js';
 

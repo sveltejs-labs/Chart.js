@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { render } from 'vitest-browser-svelte';
-import { PolarArea } from '$lib';
+import { PolarArea } from '$lib/index.js';
 import type { ChartData, ChartOptions } from 'chart.js';
 
 const data: ChartData = {
