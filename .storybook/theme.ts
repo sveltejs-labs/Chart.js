@@ -1,13 +1,16 @@
 import { create } from '@storybook/theming';
 
 const theme = create({
-	base: 'light',
-
-	brandTitle: '@sveltejs-labs/chart.js',
+	base: 'dark',
 
 	// Typography
 	fontBase: '"EB Garamond", serif',
 	// fontCode: 'monospace',
+
+	brandTitle: '@sveltejs-labs/chart.js',
+	brandUrl: 'https://www.npmjs.com/package/@sveltejs-labs/chart.js',
+	brandImage: '/logo.png',
+	brandTarget: '_blank',
 
 	// Color
 	colorPrimary: '#eb5027',
