@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -e
+
+bun install --frozen-lockfile
+bun run lint
+bun run check
+
+# bun run test
