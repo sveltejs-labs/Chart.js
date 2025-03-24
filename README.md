@@ -1,58 +1,44 @@
-# create-svelte
+# @sveltejs-labs/chart.js
 
-Everything you need to build a Svelte library, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+<img align="right" width="100" height="100" alt="@sveltejs-labs/chart.js logo" src="https://raw.githubusercontent.com/sveltejs-labs/chart.js/master/static/logo.png">
 
-Read more about creating a library [in the docs](https://svelte.dev/docs/kit/packaging).
+Svelte wrapper for [chart.js](https://www.chartjs.org/) Open for PRs and contributions!
 
-## Creating a project
+[![npm version](https://badge.fury.io/js/@sveltejs-labs%2Fchart.js.svg)](https://badge.fury.io/js/@sveltejs-labs%2Fchart.js)
+![NPM Version](https://img.shields.io/npm/v/%40sveltejs-labs%2Fchart.js)
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Install
 
-```bash
-# create a new project in the current directory
-npx sv create
+Install this library with peer dependencies:
 
-# create a new project in my-app
-npx sv create my-app
+```
+bun add @sveltejs-labs/chart.js chart.js
+# or
+pnpm add @sveltejs-labs/chart.js chart.js
+# or
+yarn add @sveltejs-labs/chart.js chart.js
+# or
+npm i @sveltejs-labs/chart.js chart.js
 ```
 
-## Developing
+## Usage
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+```svelte
+<script>
+  import { Line } from '@sveltejs-labs/chart.js'
+</script>
 
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+<Line data={...} />
 ```
 
-Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
+### Custom Size
 
-## Building
+In order for Chart.js to obey the custom size you need to set `maintainAspectRatio` to false, example:
 
-To build your library:
-
-```bash
-npm run package
+```svelte
+<Line {data} width={100} height={50} options={{ maintainAspectRatio: false }} />
 ```
 
-To create a production version of your showcase app:
+## License
 
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
-
-## Publishing
-
-Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
-
-To publish your library to [npm](https://www.npmjs.com):
-
-```bash
-npm publish
-```
+Read [LICENSE.md](LICENSE.md)
