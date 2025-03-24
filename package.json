@@ -9,7 +9,7 @@
 		"chart.js",
 		"wrapper"
 	],
-	"homepage": "https://github.com/sveltejs-labs/chart.js",
+	"homepage": "https://www.npmjs.com/package/@sveltejs-labs/chart.js",
 	"author": "Minsoo Choo <minsoochoo0122@proton.me>",
 	"license": "MIT",
 	"repository": {
