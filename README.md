@@ -11,7 +11,7 @@ Svelte wrapper for [chart.js](https://www.chartjs.org/) Open for PRs and contrib
 
 Install this library with peer dependencies:
 
-```
+```shell
 bun add @sveltejs-labs/chart.js chart.js
 # or
 pnpm add @sveltejs-labs/chart.js chart.js
