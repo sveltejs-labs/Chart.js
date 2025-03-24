@@ -1,5 +1,5 @@
 <script lang="ts">
-	import chart from '$lib/utils/chart.svelte';
+	import Chart from '$lib/components/Chart.svelte';
 
 	let {
 		data,
@@ -14,25 +14,15 @@
 	}: ChartProps = $props();
 </script>
 
-{#key [data, options, updateMode]}
-	<canvas
-		use:chart={{
-			type: 'bar',
-			data: $state.snapshot(data),
-			options: $state.snapshot(options),
-			updateMode: $state.snapshot(updateMode),
-			plugins: $state.snapshot(plugins)
-		}}
-		{id}
-		{width}
-		{height}
-		aria-label={ariaLabel}
-		{role}
-	></canvas>
-{/key}
-
-<style>
-	canvas {
-		max-width: 100%;
-	}
-</style>
+<Chart
+	type="bar"
+	{data}
+	{options}
+	{updateMode}
+	{plugins}
+	{id}
+	{width}
+	{height}
+	aria-label={ariaLabel}
+	{role}
+/>
