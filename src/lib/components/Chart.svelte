@@ -2,6 +2,7 @@
 	import { onMount, onDestroy } from 'svelte';
 	import Chart, { registerables } from 'chart.js/auto';
 	import type { ChartType } from 'chart.js/auto';
+	import type { ChartData, ChartOptions } from 'chart.js';
 
 	let {
 		type,
@@ -25,8 +26,8 @@
 		if (canvasRef) {
 			chart = new Chart(canvasRef, {
 				type,
-				data,
-				options,
+				data: $state.snapshot(data) as ChartData,
+				options: $state.snapshot(options) as ChartOptions,
 				plugins
 			});
 		}
@@ -35,8 +36,8 @@
 	$effect(() => {
 		if (!chart) return;
 
-		chart.data = data;
-		Object.assign(chart.options, options);
+		chart.data = $state.snapshot(data) as ChartData;
+		Object.assign(chart.options, $state.snapshot(options) as ChartOptions);
 		chart.update(updateMode);
 	});
 

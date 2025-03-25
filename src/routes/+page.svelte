@@ -4,7 +4,7 @@
 	import type { ChartData, ChartOptions } from 'chart.js';
 
 	const labels = months({ count: 7 });
-	const data: ChartData = {
+	const data: ChartData = $state({
 		labels: labels,
 		datasets: [
 			{
@@ -31,15 +31,15 @@
 				borderWidth: 1
 			}
 		]
-	};
+	});
 
-	const options: ChartOptions = {
+	const options: ChartOptions = $state({
 		scales: {
 			y: {
 				beginAtZero: true
 			}
 		}
-	};
+	});
 </script>
 
 <Bar {data} {options} />
