@@ -5,9 +5,9 @@
 	"keywords": [
 		"svelte",
 		"sveltekit",
+		"wrapper",
 		"chart",
-		"chart.js",
-		"wrapper"
+		"chart.js"
 	],
 	"homepage": "https://www.npmjs.com/package/@sveltejs-labs/chart.js",
 	"author": "Minsoo Choo <minsoochoo0122@proton.me>",
