@@ -22,6 +22,10 @@ jobs:
         run: |
           bun install
 
+      - name: Install Playwright Browsers
+        run: |
+          bunx playwright install --with-deps
+
       - name: Check linting
         run: |
           bun run lint
@@ -34,6 +38,13 @@ jobs:
         run: |
           bun run build
 
-#      - name: Test
-#        run: |
-#          bun run test
+      - name: Test
+        run: |
+          bun run test:headless
+
+      - uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 30
