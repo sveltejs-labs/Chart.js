@@ -7,7 +7,7 @@ const theme = create({
 	fontBase: '"EB Garamond", serif',
 	// fontCode: 'monospace',
 
-	brandTitle: '@sveltejs-labs/chart.js',
+	brandTitle: '@sveltejs-labs/Chart.js',
 	brandUrl: 'https://www.npmjs.com/package/@sveltejs-labs/chart.js',
 	brandImage: '/logo.png',
 	brandTarget: '_blank',
